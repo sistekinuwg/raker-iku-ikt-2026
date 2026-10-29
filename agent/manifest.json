@@ -1,0 +1,77 @@
+{
+  "$schema_note": "Manifest agen untuk orkestrasi lintas-tool. Semua path relatif terhadap root repositori.",
+  "project": {
+    "name": "raker-iku-ikt-2026",
+    "description": "Pendampingan Raker IKU IKT 2026 dan dokumen akreditasi institusi (BAN-PT IAPT 4.1) dan program studi (LAM INFOKOM 2.1).",
+    "language": "id-ID",
+    "branch": "arena/23f03359-raker-iku-ikt-2026",
+    "timezone": "Asia/Bangkok",
+    "location": "Malang, Jawa Timur, ID"
+  },
+  "entrypoint": "AGENTS.md",
+  "read_order": [
+    "AGENTS.md",
+    "agent/SOUL.md",
+    "agent/PERSONA.md",
+    "agent/MEMORY.md"
+  ],
+  "memory": "agent/MEMORY.md",
+  "persona": "agent/PERSONA.md",
+  "soul": "agent/SOUL.md",
+  "agents": [
+    {
+      "id": "iapt-institusi",
+      "file": "agent/agents/iapt-institusi.md",
+      "scope": "institusi",
+      "regulation": "BAN-PT IAPT 4.1 (Perban 35/2025)",
+      "triggers": ["LED institusi", "LKPT", "CRAM", "IKU institusi", "diferensiasi misi"]
+    },
+    {
+      "id": "lam-infokom-prodi",
+      "file": "agent/agents/lam-infokom-prodi.md",
+      "scope": "prodi",
+      "regulation": "LAM INFOKOM 2.1",
+      "triggers": ["LED prodi", "LKPS", "9 kriteria", "OBE", "CPL", "kurikulum"]
+    },
+    {
+      "id": "spmi-alignment",
+      "file": "agent/agents/spmi-alignment.md",
+      "scope": "institusi+prodi",
+      "regulation": "SPMI internal",
+      "triggers": ["SPMI", "PPEPP", "PPDCA", "standar mutu", "formulir SPMI"]
+    },
+    {
+      "id": "iku-ikt-data",
+      "file": "agent/agents/iku-ikt-data.md",
+      "scope": "data",
+      "regulation": "Permen 2026 (rumus IKU)",
+      "triggers": ["IKU", "IKT", "xlsx", "rumus", "target", "ketercapaian"]
+    },
+    {
+      "id": "asesmen-lapangan",
+      "file": "agent/agents/asesmen-lapangan.md",
+      "scope": "institusi+prodi",
+      "regulation": "IAPT 4.1 dan LAM INFOKOM 2.1",
+      "triggers": ["asesmen lapangan", "AL", "visitasi", "asesor", "wawancara"]
+    }
+  ],
+  "rules": {
+    "no_fabrication": true,
+    "missing_data_marker": "[PERLU DATA]",
+    "regulation_reference_required": true,
+    "source_files_immutable": true,
+    "allowed_git_branch": "arena/23f03359-raker-iku-ikt-2026",
+    "personal_data_anonymize": true
+  },
+  "score_scale": {
+    "rubric": "LED review",
+    "min": 1,
+    "max": 4,
+    "labels": {"1": "sangat kurang", "2": "kurang", "3": "baik", "4": "sangat baik dan terbukti"}
+  },
+  "output_format": ["Analisis Ketercapaian/Standar", "Identifikasi Celah/Gap", "Rekomendasi Narasi/Data"],
+  "external_sources": {
+    "google_drive_folder_id": "1SekApOWOspiql5oM6d8H7KmNf75ZJowT",
+    "downloaded_to_repo": false
+  }
+}
