@@ -49,3 +49,5 @@ Subfolder dan berkas yang teridentifikasi:
 | Tanggal | Keputusan / Perubahan | Oleh |
 |---|---|---|
 | 2026-10-29 | Membuat AGENTS.md, CLAUDE.md, folder agent/ (SOUL, PERSONA, MEMORY, agents/, manifest.json) | Agen Arena |
+| 2026-10-29 | Aturan penyimpanan hasil analisis: `analisis/0xx_namafile_DDMMYYYY_HM.md` (Markdown, nomor urut 3 digit, waktu Asia/Bangkok) | Pengguna |
+| 2026-10-29 | Salinan Google Drive (27 berkas, 70 MB) disimpan di `google_drive/` dan di-ignore Git (PR #2) | Agen Arena |

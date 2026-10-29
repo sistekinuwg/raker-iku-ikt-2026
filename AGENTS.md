@@ -33,6 +33,15 @@ Berkas ini adalah titik masuk utama untuk agen AI apa pun (Codex, Claude Code, C
 | Analisis dan validasi data IKU/IKT (xlsx) | `agent/agents/iku-ikt-data.md` |
 | Persiapan Asesmen Lapangan (AL) | `agent/agents/asesmen-lapangan.md` |
 
-## 5. Perintah umum
+## 5. Penyimpanan hasil analisis
+- Setiap berkas hasil analisis disimpan dalam format **Markdown (`.md`)** di folder `analisis/`.
+- Format nama berkas: `0xx_namafile_DDMMYYYY_HM.md`
+  - `0xx`: nomor urut tiga digit (001, 002, 003, …), bertambah untuk setiap berkas baru.
+  - `namafile`: nama deskriptif singkat dengan huruf kecil dan garis bawah, misalnya `validasi_rumus_iku`.
+  - `DDMMYYYY_HM`: tanggal dan jam pembuatan dalam zona waktu Asia/Bangkok (contoh: `29102026_1008`).
+- Contoh: `analisis/001_validasi_rumus_iku_29102026_1008.md`
+- Jangan menimpa berkas lama. Setiap revisi mendapat nomor urut dan timestamp baru.
+
+## 6. Perintah umum
 - Tidak ada build/test formal saat ini. Verifikasi cukup dengan membaca ulang berkas dan memeriksa konsistensi angka.
 - Setelah mengubah berkas di `agent/`, perbarui `agent/MEMORY.md` bagian *Log Keputusan* bila ada keputusan baru.
